@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://asterling.co.uk/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://asterling.co.uk/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/meet-alfie.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://asterling.co.uk/projects.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/areas-we-cover.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Services -->
+  <url><loc>https://asterling.co.uk/services/patios-paving.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/services/driveways.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/services/fencing-gates.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/services/decking.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/services/garden-walls.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/services/water-features.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/services/artificial-grass-lawns.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/services/pergolas-outdoor-structures.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/services/groundworks-drainage.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/services/bespoke-garden-design.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Gallery -->
+  <url><loc>https://asterling.co.uk/gallery/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/gallery/patios.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/gallery/fencing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/gallery/water-features.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/gallery/driveways.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://asterling.co.uk/blog/patio-cost-chichester.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/blog/choosing-right-fence.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/blog/water-features-transform-garden.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/blog/garden-transformations-west-sussex.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://asterling.co.uk/blog/professional-landscaper-vs-diy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Areas -->
+  <url><loc>https://asterling.co.uk/areas/landscaping-chichester.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-emsworth.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-worthing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-brighton.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-havant.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-bognor-regis.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-guildford.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-petersfield.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-littlehampton.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/areas/landscaping-west-sussex.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Projects -->
+  <url><loc>https://asterling.co.uk/projects/before-after.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://asterling.co.uk/projects/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://asterling.co.uk/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://asterling.co.uk/terms-and-conditions.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>
