@@ -1,5 +1,6 @@
 /* ============================================
    A STERLING LANDSCAPES — Main JavaScript
+   v3: Enhanced animations + stat counters
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -104,6 +105,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // --- Staggered Animation Setup ---
+  // Assign stagger index to sibling groups
+  function assignStagger(selector) {
+    const groups = {};
+    document.querySelectorAll(selector).forEach(function (el) {
+      const parent = el.parentElement;
+      if (!groups[parent]) {
+        groups[parent] = 0;
+      }
+      el.style.setProperty('--stagger', groups[parent]);
+      groups[parent]++;
+    });
+  }
+
+  assignStagger('.service-card');
+  assignStagger('.project-card');
+  assignStagger('.blog-card');
+  assignStagger('.stat');
+
   // --- Intersection Observer for fade-in animations ---
   const observerOptions = {
     threshold: 0.1,
@@ -122,6 +142,50 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.section, .service-card, .project-card, .blog-card, .stat').forEach(function (el) {
     el.classList.add('animate-target');
     observer.observe(el);
+  });
+
+  // --- Animated Stat Counters ---
+  function animateCounter(el) {
+    const text = el.textContent.trim();
+    // Parse: extract prefix (e.g. "£"), number, and suffix (e.g. "+", "K+")
+    const match = text.match(/^([^\d]*)(\d+)(.*)$/);
+    if (!match) return;
+
+    const prefix = match[1];
+    const target = parseInt(match[2], 10);
+    const suffix = match[3];
+    const duration = 1600;
+    const start = performance.now();
+
+    function easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+
+    function tick(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const current = Math.round(easeOutQuart(progress) * target);
+      el.textContent = prefix + current + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  const statObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat__number').forEach(function (el) {
+    statObserver.observe(el);
   });
 
   // --- Contact Form (basic validation) ---
@@ -167,6 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: calc(var(--stagger, 0) * 0.1s);
     }
     .animate-target.animate-in {
       opacity: 1;
