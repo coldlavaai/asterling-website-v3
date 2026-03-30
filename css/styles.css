@@ -820,6 +820,9 @@ blockquote {
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .service-card::before {
@@ -843,17 +846,15 @@ blockquote {
   transform: scaleX(1);
 }
 
+.service-card:hover h3 {
+  color: var(--color-dark-green);
+}
+
 .service-card h3 {
   font-size: 1.3rem;
   margin-bottom: var(--space-xs);
-}
-
-.service-card h3 a {
   color: var(--color-black);
-}
-
-.service-card h3 a:hover {
-  color: var(--color-dark-green);
+  transition: color var(--transition);
 }
 
 .service-card p {
