@@ -107,9 +107,8 @@
 .comparison-after {
   position: relative;
   overflow: hidden;
-  height: 320px;
-  min-height: 320px;
-  max-height: 320px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
 }
 
 .comparison-before img,
@@ -231,9 +230,8 @@
 
   .comparison-before,
   .comparison-after {
-    height: 240px;
-    min-height: 240px;
-    max-height: 240px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
   }
 
   .comparison-arrow {
