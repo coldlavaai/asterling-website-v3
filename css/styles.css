@@ -331,9 +331,8 @@ blockquote {
 }
 
 .logo img {
-  height: 85px;
+  height: 100px;
   width: auto;
-  mix-blend-mode: multiply;
 }
 
 .logo-text {
