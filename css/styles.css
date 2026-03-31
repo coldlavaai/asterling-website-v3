@@ -1256,8 +1256,6 @@ blockquote {
 .footer-brand .logo img {
   height: 85px;
   margin-bottom: var(--space-sm);
-  opacity: 0.5;
-  filter: brightness(0.7);
 }
 
 .footer-brand p {
