@@ -263,3 +263,224 @@
 .comparison-card:nth-child(3) { animation-delay: 0.3s; }
 .comparison-card:nth-child(4) { animation-delay: 0.4s; }
 .comparison-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* ============================================
+   Lightbox Modal — Premium Overlay Gallery
+   ============================================ */
+
+/* Modal Overlay */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Lightbox Content Container */
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lightbox Image */
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-image.loaded {
+  opacity: 1;
+}
+
+/* Image Label (Before/After) */
+.lightbox-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1.2rem;
+  font-family: var(--font-accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-white);
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+/* Close Button */
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Navigation Arrows */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--color-white);
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.lightbox-nav svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-white);
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-nav--prev {
+  left: 2rem;
+}
+
+.lightbox-nav--next {
+  right: 2rem;
+}
+
+.lightbox-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.lightbox-nav:disabled:hover {
+  transform: translateY(-50%) scale(1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Add Cursor Pointer to Comparison Cards */
+.comparison-images {
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .lightbox-nav {
+    width: 50px;
+    height: 50px;
+  }
+
+  .lightbox-nav svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lightbox-nav--prev {
+    left: 1rem;
+  }
+
+  .lightbox-nav--next {
+    right: 1rem;
+  }
+
+  .lightbox-label {
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.4rem 1rem;
+    font-size: 12px;
+  }
+
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .lightbox-image {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+}
+
+/* Smooth Fade Animation for Image Transitions */
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-image.loaded {
+  animation: lightboxFadeIn 0.4s ease forwards;
+}
+
+/* Prevent Body Scroll When Modal Open */
+body.lightbox-open {
+  overflow: hidden;
+}
