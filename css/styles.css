@@ -668,8 +668,9 @@ blockquote {
 .service-card .img-container {
   margin: calc(-1 * var(--space-md));
   margin-bottom: var(--space-md);
-  min-height: 200px;
-  max-height: 280px;
+  height: 240px;
+  min-height: 240px;
+  max-height: 240px;
 }
 
 .project-card .img-container {
