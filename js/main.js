@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* --- Animation CSS injected via JS --- */
 (function () {
-  const style = document.createElement('style');
+  var style = document.createElement('style');
   style.textContent = `
     .animate-target {
       opacity: 0;
@@ -237,6 +237,22 @@ document.addEventListener('DOMContentLoaded', function () {
       opacity: 1;
       transform: translateY(0);
     }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-target {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
   `;
   document.head.appendChild(style);
+
+  /* Safety net: force all content visible after 2s in case observer fails */
+  setTimeout(function () {
+    document.querySelectorAll('.animate-target').forEach(function (el) {
+      if (!el.classList.contains('animate-in')) {
+        el.classList.add('animate-in');
+      }
+    });
+  }, 2000);
 })();
