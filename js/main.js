@@ -188,23 +188,18 @@ document.addEventListener('DOMContentLoaded', function () {
     statObserver.observe(el);
   });
 
-  // --- Contact Form (basic validation) ---
+  // --- Contact Form ---
+  // Form submits natively to FormSubmit via the action attribute.
+  // Disable the button on submit so the user gets feedback while the redirect happens.
   const contactForm = document.querySelector('.contact-form form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      // In production, this would submit to a backend
+    contactForm.addEventListener('submit', function () {
       const btn = this.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = 'Message Sent — Thank You';
-      btn.disabled = true;
-      btn.style.opacity = '0.7';
-      setTimeout(function () {
-        btn.textContent = originalText;
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        contactForm.reset();
-      }, 3000);
+      if (btn) {
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+      }
     });
   }
 
