@@ -26,23 +26,122 @@
   <link rel="preload" as="image" href="assets/images/hero/hero-1.webp">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Schema.org LocalBusiness -->
+  <!-- Schema.org: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://asterling.co.uk/#organization",
     "name": "A Sterling Landscapes Ltd",
-    "description": "Bespoke luxury landscaping in Chichester and West Sussex.",
+    "legalName": "A Sterling Landscapes Ltd",
     "url": "https://asterling.co.uk",
-    "telephone": "07795 599 909",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://asterling.co.uk/assets/logo-circular.png",
+      "width": 512,
+      "height": 512
+    },
+    "image": "https://asterling.co.uk/assets/images/og-preview.jpg",
+    "description": "Bespoke luxury landscaping company in Chichester and West Sussex. Patios, driveways, garden design and builds from £100K+.",
+    "foundingDate": "2014",
+    "founder": {
+      "@type": "Person",
+      "name": "Alfie Sterling"
+    },
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 10
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chichester",
       "addressRegion": "West Sussex",
       "addressCountry": "GB"
     },
-    "areaServed": ["West Sussex", "East Sussex", "Surrey"],
-    "priceRange": "£££"
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44-7795-599909",
+      "email": "info@asterling.co.uk",
+      "contactType": "Customer Service",
+      "availableLanguage": "English",
+      "areaServed": "GB"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: LocalBusiness / ProfessionalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://asterling.co.uk/#localbusiness",
+    "name": "A Sterling Landscapes Ltd",
+    "description": "Bespoke luxury landscaping in Chichester and West Sussex. Patios, driveways, garden design and builds from £100K+.",
+    "url": "https://asterling.co.uk",
+    "telephone": "+44-7795-599909",
+    "email": "info@asterling.co.uk",
+    "image": "https://asterling.co.uk/assets/images/og-preview.jpg",
+    "logo": "https://asterling.co.uk/assets/logo-circular.png",
+    "priceRange": "£££",
+    "foundingDate": "2014",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chichester",
+      "addressRegion": "West Sussex",
+      "addressCountry": "GB"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "West Sussex" },
+      { "@type": "AdministrativeArea", "name": "East Sussex" },
+      { "@type": "AdministrativeArea", "name": "Surrey" }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Landscaping Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bespoke Garden Design", "url": "https://asterling.co.uk/services/bespoke-garden-design.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Patios & Paving", "url": "https://asterling.co.uk/services/patios-paving.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Driveways", "url": "https://asterling.co.uk/services/driveways.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Decking", "url": "https://asterling.co.uk/services/decking.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fencing & Gates", "url": "https://asterling.co.uk/services/fencing-gates.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Garden Walls", "url": "https://asterling.co.uk/services/garden-walls.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pergolas & Outdoor Structures", "url": "https://asterling.co.uk/services/pergolas-outdoor-structures.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water Features", "url": "https://asterling.co.uk/services/water-features.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Artificial Grass Lawns", "url": "https://asterling.co.uk/services/artificial-grass-lawns.html" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Groundworks & Drainage", "url": "https://asterling.co.uk/services/groundworks-drainage.html" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://asterling.co.uk/#website",
+    "url": "https://asterling.co.uk",
+    "name": "A Sterling Landscapes",
+    "description": "Luxury landscaping in West Sussex",
+    "publisher": { "@id": "https://asterling.co.uk/#organization" },
+    "inLanguage": "en-GB"
+  }
+  </script>
+
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://asterling.co.uk/" }
+    ]
   }
   </script>
 </head>
