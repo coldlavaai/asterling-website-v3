@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.5 });
 
-  document.querySelectorAll('.stat__number').forEach(function (el) {
+  document.querySelectorAll('.stat__number:not([data-static])').forEach(function (el) {
     statObserver.observe(el);
   });
 

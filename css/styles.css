@@ -1208,6 +1208,34 @@ blockquote {
   padding: var(--space-lg) 0;
 }
 
+.stats-bar--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.reviews-bar .stat__number {
+  font-size: clamp(1.7rem, 2.8vw, 2.1rem);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.review-stars {
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  line-height: 1.35;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  margin-bottom: 0.4rem;
+}
+
+.reviews-bar a.stat {
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.reviews-bar a.stat:hover {
+  opacity: 0.75;
+}
+
 .stat {
   padding: var(--space-sm);
 }
@@ -1680,6 +1708,10 @@ blockquote {
 
   .stats-bar {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-bar--three .stat:last-child {
+    grid-column: 1 / -1;
   }
 
   .area-list {
