@@ -52,5 +52,6 @@
 
   <!-- Legal -->
   <url><loc>https://asterling.co.uk/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://asterling.co.uk/workmanship-guarantee.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://asterling.co.uk/terms-and-conditions.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
